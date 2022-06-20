@@ -109,13 +109,13 @@ git commit -am "コメント"
 git push heroku master
 ```
 
-## 作成したアプリの確認方法
+### 作成したアプリの確認方法
 
 作成したアプリは `heroku open -a アプリ名` から確認できる。  
 または、[Heroku の Web ページ](https://jp.heroku.com/home)からログインをした後、
 Dashboard のアプリページから「Open app」をクリックするか、URL に`https://アプリ名.herokuapp.com` を入力しても確認することができる。
 
-## その他の便利なコマンド
+### その他の便利なコマンド
 
 | コマンド               | 内容                                                       |
 | ---------------------- | ---------------------------------------------------------- |
@@ -124,3 +124,8 @@ Dashboard のアプリページから「Open app」をクリックするか、UR
 | `heroku info アプリ名` | WebURL や Git リポジトリの URL などを確認できる            |
 
 これら以外のコマンドについては、[公式ページ](https://devcenter.heroku.com/ja/articles/heroku-cli-commands)もしくは`heroku help`で確認できる。
+
+### 参考サイト
+
+> [【超入門】基礎から始める Heroku の使い方（初心者向け）](https://tech-blog.rakus.co.jp/entry/20200813/heroku)  
+> [【Python】Python プログラムを Heroku にデプロイする方法](https://qiita.com/1-row/items/80f89c8ada2e61f04446)
