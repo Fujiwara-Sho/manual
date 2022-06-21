@@ -78,7 +78,7 @@ cd project
   プログラムの実行方法を記載するファイル  
    Flask、Django 等の web アプリケーションであれば、`web: gunicorn app:app --log-file=-` を Procfile に記載する
 
-### 3. Heroku にアプロを作成する
+### 3. Heroku にアプリを作成する
 
 Heroku にログインした状態し、アプリを作成する。
 
