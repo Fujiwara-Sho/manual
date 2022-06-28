@@ -53,30 +53,30 @@ cd project
 
 ### 2. プロジェクトフォルダにデプロイするために必要なファイルを準備する
 
-- Python のプログラムファイル  
-   main.py, app.py などの Python の実行ファイル
-- runtime.txt  
-   Python のバージョンを記載するテキストファイル
-  Heroku がサポートしているバージョンを記載すること
+-   Python のプログラムファイル  
+     main.py, app.py などの Python の実行ファイル
+-   runtime.txt  
+     Python のバージョンを記載するテキストファイル
+    Heroku がサポートしているバージョンを記載すること
 
-  ```bash
-  # 環境に合わせたPythonのバージョンを記載
-  echo python-3.7.13 > runtime.txt
-  ```
+    ```bash
+    # 環境に合わせたPythonのバージョンを記載
+    echo python-3.7.13 > runtime.txt
+    ```
 
-- requirements.txt  
-   実行に必要なモジュールを記載する
+-   requirements.txt  
+     実行に必要なモジュールを記載する
 
-  ```bash
-  # モジュール一覧の作成
-  pip freeze > requirements.txt
-  ```
+    ```bash
+    # モジュール一覧の作成
+    pip freeze > requirements.txt
+    ```
 
-  ※ローカルにインストールしたモジュールがすべて出力されてしまうので、不要なものは削除すること。
+    ※ローカルにインストールしたモジュールがすべて出力されてしまうので、不要なものは削除すること。
 
-- Procfile
-  プログラムの実行方法を記載するファイル  
-   Flask、Django 等の web アプリケーションであれば、`web: gunicorn app:app --log-file=-` を Procfile に記載する
+-   Procfile
+    プログラムの実行方法を記載するファイル  
+     Flask、Django 等の web アプリケーションであれば、`web: gunicorn app:app --log-file=-` を Procfile に記載する
 
 ### 3. Heroku にアプリを作成する
 
@@ -103,6 +103,8 @@ heroku git:remote -a アプリ名
 デプロイ（実行プログラム等の変更があった場合はここから）
 
 ```bash
+# 変更したファイルをインデックスに登録
+git add .
 # 変更したファイルをリポジトリに書き込む
 git commit -am "コメント"
 # Herokuにローカルで作成したファイルをpush（デプロイ）
